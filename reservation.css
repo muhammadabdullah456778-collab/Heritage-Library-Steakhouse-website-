@@ -1,0 +1,103 @@
+:root {
+    --bg-dark: #0f0802;
+    --bg-section: #1a0d02;
+    --accent-gold: #C5A059;
+    --text-light: #e0e0e0;
+    --text-muted: #a0a0a0;
+}
+
+.reservation-hero {
+    height: 50vh;
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('images/restaurent.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 80px;
+}
+
+.reservation-section {
+    padding: 80px 5%;
+    display: flex;
+    justify-content: center;
+}
+
+.reservation-container {
+    background: rgba(26, 13, 2, 0.95);
+    padding: 50px;
+    border-radius: 10px;
+    border: 1px solid rgba(197, 160, 89, 0.3);
+    width: 100%;
+    max-width: 800px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.res-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.res-full {
+    grid-column: 1 / -1;
+}
+
+.input-group label {
+    display: block;
+    color: var(--text-light);
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    border-radius: 4px;
+    color: #fff;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.input-group input[type="date"]::-webkit-calendar-picker-indicator,
+.input-group input[type="time"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-gold);
+}
+
+.btn-book {
+    width: 100%;
+    padding: 15px;
+    background: var(--accent-gold);
+    color: #000;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+.btn-book:hover {
+    background: #d4b475;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    .res-grid {
+        grid-template-columns: 1fr;
+    }
+}

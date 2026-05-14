@@ -1,0 +1,31 @@
+/* About Page Specific Styles */
+.about-page-main {
+    background: var(--bg-section);
+    padding: 100px 5%;
+}
+
+.philosophy {
+    padding: 60px 5%;
+}
+
+/* Reusing your existing .chapter classes for consistency */
+.philosophy .chapter {
+    background: transparent;
+    border: 1px solid rgba(197, 160, 89, 0.05);
+}
+
+/* Animation for the Header Text */
+.hero-content h1 {
+    animation: fadeInDown 1s ease;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

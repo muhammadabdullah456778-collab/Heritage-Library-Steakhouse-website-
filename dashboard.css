@@ -1,0 +1,167 @@
+:root {
+    --bg-dark: #0f0802;
+    --bg-section: #1a0d02;
+    --accent-gold: #C5A059;
+    --text-light: #e0e0e0;
+    --text-muted: #a0a0a0;
+}
+
+.dashboard-section {
+    padding: 120px 5% 80px;
+    display: flex;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.dash-sidebar {
+    flex: 1;
+    background: var(--bg-section);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    height: fit-content;
+}
+
+.user-profile {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+.user-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--accent-gold);
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0 auto 15px;
+}
+
+.user-name {
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.user-status {
+    color: var(--accent-gold);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.dash-nav ul li {
+    margin-bottom: 15px;
+}
+
+.dash-nav a {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.dash-nav a:hover, .dash-nav a.active {
+    background: rgba(197, 160, 89, 0.1);
+    color: var(--accent-gold);
+}
+
+.dash-main {
+    flex: 3;
+}
+
+.dash-card {
+    background: rgba(26, 13, 2, 0.6);
+    border: 1px solid rgba(197, 160, 89, 0.1);
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.dash-card-title {
+    color: var(--accent-gold);
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stat-box {
+    background: var(--bg-section);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    border: 1px solid rgba(197, 160, 89, 0.1);
+}
+
+.stat-value {
+    font-size: 2rem;
+    color: #fff;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.stat-label {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.history-list {
+    list-style: none;
+}
+
+.history-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.history-item:last-child {
+    border-bottom: none;
+}
+
+.hist-details h4 {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+.hist-details p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.hist-status {
+    color: #2ecc71;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.hist-price {
+    color: var(--accent-gold);
+}
+
+@media (max-width: 800px) {
+    .dashboard-section {
+        flex-direction: column;
+    }
+    .stat-grid {
+        grid-template-columns: 1fr;
+    }
+}

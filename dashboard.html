@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Herritage Library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+<nav class="navbar" style="background: rgba(15, 8, 2, 0.95); position: fixed;">
+    <a href="index.html" class="logo">HERRITAGE LIBRARY</a>
+    <div class="nav-links" id="navLinks">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Explore <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="about.html">About Us</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </li>
+            <li><a href="dashboard.html" style="color: #C5A059;">Dashboard</a></li>
+        </ul>
+    </div>
+    <img src="images/btn.png" alt="menu" class="menu-hamburger" onclick="toggleMenu()">
+</nav>
+
+<section class="dashboard-section animate-on-scroll">
+    <!-- Sidebar -->
+    <div class="dash-sidebar">
+        <div class="user-profile">
+            <div class="user-avatar">AD</div>
+            <h3 class="user-name">Alex Doe</h3>
+            <p class="user-status">Gold Library Member</p>
+        </div>
+        <nav class="dash-nav">
+            <ul>
+                <li><a href="#" class="active"><i class="fas fa-chart-line"></i> Overview</a></li>
+                <li><a href="#"><i class="fas fa-receipt"></i> Order History</a></li>
+                <li><a href="#"><i class="fas fa-calendar-check"></i> Reservations</a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> Settings</a></li>
+                <li><a href="signin.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <div class="dash-main">
+        <div class="dash-card">
+            <h2 class="dash-card-title"><i class="fas fa-star"></i> Your Library Stats</h2>
+            <div class="stat-grid">
+                <div class="stat-box">
+                    <div class="stat-value">1,250</div>
+                    <div class="stat-label">Loyalty Points</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">12</div>
+                    <div class="stat-label">Total Orders</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-value">3</div>
+                    <div class="stat-label">Upcoming Bookings</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dash-card">
+            <h2 class="dash-card-title"><i class="fas fa-history"></i> Recent Orders</h2>
+            <ul class="history-list">
+                <li class="history-item">
+                    <div class="hist-details">
+                        <h4>Dry-Aged Ribeye + Vintage Espresso</h4>
+                        <p>May 1, 2026</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <span class="hist-price">16,800 PKR</span><br>
+                        <span class="hist-status">Completed</span>
+                    </div>
+                </li>
+                <li class="history-item">
+                    <div class="hist-details">
+                        <h4>Wagyu Masterpiece</h4>
+                        <p>April 15, 2026</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <span class="hist-price">26,600 PKR</span><br>
+                        <span class="hist-status">Completed</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="dash-card">
+            <h2 class="dash-card-title"><i class="fas fa-calendar-alt"></i> Upcoming Reservations</h2>
+            <ul class="history-list">
+                <li class="history-item">
+                    <div class="hist-details">
+                        <h4>Table for 2</h4>
+                        <p>May 10, 2026 at 8:00 PM</p>
+                    </div>
+                    <div style="text-align: right;">
+                        <span class="hist-status" style="color: #f39c12;">Confirmed</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<footer class="main-footer animate-on-scroll">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h2 class="footer-logo">HERRITAGE LIBRARY</h2>
+          <p>Premium Cafe & Steakhouse. Culinary excellence with a cinematic vibe.</p>
+        </div>
+        <div class="footer-section footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="order.html">ORDER ONLINE</a></li>
+            <li><a href="reservation.html">RESERVATIONS</a></li>
+          </ul>
+        </div>
+        <div class="footer-section footer-links">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="blog.html">THE ARCHIVES</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+          </ul>
+        </div>
+        <div class="footer-section footer-socials">
+          <h3>Follow The Vibe</h3>
+          <div class="social-icon-box">
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon github"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 HERRITAGE LIBRARY | ALL RIGHTS RESERVED</p>
+      </div>
+    </div>
+</footer>
+
+<button id="scrollToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<script src="animations.js"></script>
+<script src="common.js"></script>
+</body>
+</html>

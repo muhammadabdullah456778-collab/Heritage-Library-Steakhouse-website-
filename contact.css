@@ -1,0 +1,75 @@
+/* Contact Page Specific */
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    background: var(--bg-section-alt);
+    padding: 50px;
+    border-radius: 15px;
+    border: 1px solid rgba(197, 160, 89, 0.1);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.info-item i {
+    font-size: 1.5rem;
+    color: var(--accent-gold);
+    width: 40px;
+}
+
+.info-item h4 {
+    color: var(--accent-gold);
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+}
+
+.info-item p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* Form Styling */
+.styled-form .input-group {
+    margin-bottom: 20px;
+}
+
+.styled-form input, 
+.styled-form textarea, 
+.styled-form select {
+    width: 100%;
+    padding: 15px;
+    background: #0f0802;
+    border: 1px solid rgba(197, 160, 89, 0.2);
+    color: var(--text-light);
+    border-radius: 5px;
+    font-family: inherit;
+    outline: none;
+    transition: 0.3s;
+}
+
+.styled-form input:focus, 
+.styled-form textarea:focus, 
+.styled-form select:focus {
+    border-color: var(--accent-gold);
+}
+
+/* For Select dropdown arrow color in dark mode */
+.styled-form select {
+    appearance: none;
+    background-image: url("images/steakhouse.png");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 15px;
+}
+
+@media (max-width: 900px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+}

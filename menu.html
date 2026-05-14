@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu | Herritage Library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="menu-style.css">
+</head>
+
+<body>
+<nav class="navbar">
+    <a href="index.html" class="logo">HERRITAGE LIBRARY</a>
+    <div class="nav-links" id="navLinks">
+
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html" style="color: #C5A059;">Menu</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Explore <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="about.html">About Us</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </li>
+            <li><a href="signin.html">Dashboard</a></li>
+        </ul>
+    </div>
+    <img src="images/btn.png" alt="menu" class="menu-hamburger" onclick="toggleMenu()">
+</nav>
+
+
+<section class="menu-hero animate-on-scroll">
+    <div class="hero-content">
+        <h1>The Culinary Archives</h1>
+        <p>Browse through our volumes of curated taste</p>
+    </div>
+</section>
+
+<div class="menu-container animate-on-scroll delay-100">
+    <div class="menu-volume">
+        <h2 class="volume-title">Volume I: The Steakhouse Legacy</h2>
+        <div class="menu-grid">
+            <div class="menu-card" onclick="window.location.href='order.html'">
+                <div class="card-img">
+                    <img src="images/steak1.jpg" alt="Ribeye">
+                    <span class="chapter-label">Chapter I</span>
+                </div>
+                <div class="card-details">
+                    <div class="card-header">
+                        <h3>Dry-Aged Ribeye</h3>
+                        <span class="price">13,440.00 PKR</span>
+                    </div>
+                    <p>28-day aged premium beef, seasoned with library-secret herbs.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" onclick="window.location.href='order.html'">
+                <div class="card-img">
+                    <img src="images/wagyu.jpg" alt="Wagyu">
+                    <span class="chapter-label">Chapter III</span>
+                </div>
+                <div class="card-details">
+                    <div class="card-header">
+                        <h3>Wagyu Masterpiece</h3>
+                        <span class="price">26,600.00 PKR</span>
+                    </div>
+                    <p>Grade A5 Wagyu served with truffle butter and gold flakes.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-volume">
+        <h2 class="volume-title">Volume II: Liquid Gold</h2>
+        <div class="menu-grid">
+            <div class="menu-card" onclick="window.location.href='order.html'">
+                <div class="card-img">
+                    <img src="images/coffee.jpg" alt="Espresso">
+                    <span class="chapter-label">Chapter II</span>
+                </div>
+                <div class="card-details">
+                    <div class="card-header">
+                        <h3>Vintage Espresso</h3>
+                        <span class="price">3,360.00 PKR</span>
+                    </div>
+                    <p>Ethiopian beans roasted to bring out dark chocolate notes.</p>
+                </div>
+            </div>
+
+            <div class="menu-card" onclick="window.location.href='order.html'">
+                <div class="card-img">
+                    <img src="images/mocktail.jpg" alt="Mocktail">
+                    <span class="chapter-label">Chapter VII</span>
+                </div>
+                <div class="card-details">
+                    <div class="card-header">
+                        <h3>The Library Fizz</h3>
+                        <span class="price">5,040.00 PKR</span>
+                    </div>
+                    <p>Exotic botanicals blended with fresh citrus zest.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="menu-volume">
+        <h2 class="volume-title">Volume III: Hand-Rolled Manuscripts</h2>
+        <div class="menu-grid">
+            <div class="menu-card" onclick="window.location.href='order.html'">
+                <div class="card-img">
+                    <img src="images/pasta.jpg" alt="Pasta">
+                    <span class="chapter-label">Chapter V</span>
+                </div>
+                <div class="card-details">
+                    <div class="card-header">
+                        <h3>Artisan Fettuccine</h3>
+                        <span class="price">7,840.00 PKR</span>
+                    </div>
+                    <p>Hand-rolled pasta with a heritage white sauce recipe from 1924.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-volume">
+        <h2 class="volume-title">Volume IV: Tales of the Atlantic</h2>
+        <div class="menu-grid">
+            <div class="menu-card" onclick="window.location.href='order.html'">
+                <div class="card-img">
+                    <img src="images/seafood.jpg" alt="Salmon">
+                    <span class="chapter-label">Chapter IV</span>
+                </div>
+                <div class="card-details">
+                    <div class="card-header">
+                        <h3>Atlantic Salmon</h3>
+                        <span class="price">10,640.00 PKR</span>
+                    </div>
+                    <p>Pan-seared perfection with a secret citrus glaze inspired by coastal lore.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-volume">
+        <h2 class="volume-title">Volume V: Mountain Chronicles</h2>
+        <div class="menu-grid">
+            <div class="menu-card" onclick="window.location.href='order.html'">
+                <div class="card-img">
+                    <img src="images/lamb.jpg" alt="Lamb">
+                    <span class="chapter-label">Chapter VI</span>
+                </div>
+                <div class="card-details">
+                    <div class="card-header">
+                        <h3>Herb-Crusted Lamb</h3>
+                        <span class="price">14,560.00 PKR</span>
+                    </div>
+                    <p>Slow-roasted chops seasoned with aromatic herbs from the high peaks.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-volume">
+        <h2 class="volume-title">Volume VI: Modern Classics</h2>
+        <div class="menu-grid">
+            <div class="menu-card" onclick="window.location.href='order.html'">
+                <div class="card-img">
+                    <img src="images/burger.jpg" alt="Burger">
+                    <span class="chapter-label">Chapter III</span>
+                </div>
+                <div class="card-details">
+                    <div class="card-header">
+                        <h3>Library Signature Burger</h3>
+                        <span class="price">6,720.00 PKR</span>
+                    </div>
+                    <p>Double-stacked Wagyu, aged cheddar, and our signature smoked relish.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-volume">
+        <h2 class="volume-title">Volume VII: Botanical Essays</h2>
+        <div class="menu-grid">
+            <div class="menu-card" onclick="window.location.href='order.html'">
+                <div class="card-img">
+                    <img src="images/salad.jpg" alt="Salad">
+                    <span class="chapter-label">Special</span>
+                </div>
+                <div class="card-details">
+                    <div class="card-header">
+                        <h3>Heritage Garden Salad</h3>
+                        <span class="price">5,040.00 PKR</span>
+                    </div>
+                    <p>Heirloom tomatoes, organic greens, and a balsamic reduction aged in oak.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-volume">
+        <h2 class="volume-title">Volume VIII: Sweet Epilogues</h2>
+        <div class="menu-grid">
+            <div class="menu-card" onclick="window.location.href='order.html'">
+                <div class="card-img">
+                    <img src="images/dessert.jpg" alt="Dessert">
+                    <span class="chapter-label">Chapter Final</span>
+                </div>
+                <div class="card-details">
+                    <div class="card-header">
+                        <h3>Molten Library</h3>
+                        <span class="price">4,200.00 PKR</span>
+                    </div>
+                    <p>A warm Belgian chocolate heart with aged vanilla bean cream.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="main-footer animate-on-scroll">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h2 class="footer-logo">HERRITAGE LIBRARY</h2>
+          <p>Premium Cafe & Steakhouse. Culinary excellence with a cinematic vibe.</p>
+        </div>
+        <div class="footer-section footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="order.html">ORDER ONLINE</a></li>
+            <li><a href="reservation.html">RESERVATIONS</a></li>
+          </ul>
+        </div>
+        <div class="footer-section footer-links">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="blog.html">THE ARCHIVES</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+          </ul>
+        </div>
+        <div class="footer-section footer-socials">
+          <h3>Follow The Vibe</h3>
+          <div class="social-icon-box">
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon github"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 HERRITAGE LIBRARY | THE CULINARY CHRONICLES</p>
+      </div>
+    </div>
+</footer>
+
+<button id="scrollToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+</body>
+<script src="animations.js"></script>
+<script src="common.js"></script>
+</body>
+</html>

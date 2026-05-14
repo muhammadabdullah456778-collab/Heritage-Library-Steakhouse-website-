@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visual Gallery | Herritage Library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gallery.css">
+</head>
+<body>
+
+<nav class="navbar" style="background: rgba(15, 8, 2, 0.95); position: fixed;">
+    <a href="index.html" class="logo">HERRITAGE LIBRARY</a>
+    <div class="nav-links" id="navLinks">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn" style="color: #C5A059;">Explore <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="about.html">About Us</a>
+                    <a href="gallery.html" style="color: #C5A059 !important;">Gallery</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </li>
+            <li><a href="signin.html">Dashboard</a></li>
+        </ul>
+    </div>
+    <img src="images/btn.png" alt="menu" class="menu-hamburger" onclick="toggleMenu()">
+</nav>
+
+<header class="gallery-hero animate-on-scroll">
+  <div class="hero-content">
+    <h1 style="letter-spacing: 5px;">Visual Library</h1>
+    <p>A Glimpse into Our World</p>
+  </div>
+</header>
+
+<section class="masonry-section">
+    <div class="masonry-grid">
+        <div class="masonry-item animate-on-scroll" onclick="openLightbox(this)">
+            <img src="images/steak1.jpg" alt="Dry-Aged Ribeye">
+            <div class="masonry-overlay">Dry-Aged Ribeye</div>
+        </div>
+        <div class="masonry-item animate-on-scroll delay-100" onclick="openLightbox(this)">
+            <img src="images/coffee.jpg" alt="Vintage Espresso">
+            <div class="masonry-overlay">Vintage Espresso</div>
+        </div>
+        <div class="masonry-item animate-on-scroll delay-200" onclick="openLightbox(this)">
+            <img src="images/restaurent.jpg" alt="The Dining Room">
+            <div class="masonry-overlay">The Dining Room</div>
+        </div>
+        <div class="masonry-item animate-on-scroll" onclick="openLightbox(this)">
+            <img src="images/wagyu.jpg" alt="Wagyu Beef">
+            <div class="masonry-overlay">Premium Wagyu</div>
+        </div>
+        <div class="masonry-item animate-on-scroll delay-100" onclick="openLightbox(this)">
+            <img src="images/dessert.jpg" alt="Molten Chocolate">
+            <div class="masonry-overlay">Molten Chocolate</div>
+        </div>
+        <div class="masonry-item animate-on-scroll delay-200" onclick="openLightbox(this)">
+            <img src="images/burger.jpg" alt="Signature Burger">
+            <div class="masonry-overlay">Signature Burger</div>
+        </div>
+        <div class="masonry-item animate-on-scroll" onclick="openLightbox(this)">
+            <img src="images/seafood.jpg" alt="Atlantic Salmon">
+            <div class="masonry-overlay">Atlantic Salmon</div>
+        </div>
+        <div class="masonry-item animate-on-scroll delay-100" onclick="openLightbox(this)">
+            <img src="images/pasta.jpg" alt="Artisan Fettuccine">
+            <div class="masonry-overlay">Artisan Fettuccine</div>
+        </div>
+        <div class="masonry-item animate-on-scroll delay-200" onclick="openLightbox(this)">
+            <img src="images/lamb.jpg" alt="Herb-Crusted Lamb">
+            <div class="masonry-overlay">Herb-Crusted Lamb</div>
+        </div>
+    </div>
+</section>
+
+<!-- The Lightbox Modal -->
+<div id="myLightbox" class="lightbox">
+  <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+  <img class="lightbox-content" id="img01">
+  <div id="caption" class="lightbox-caption"></div>
+</div>
+
+<footer class="main-footer animate-on-scroll">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h2 class="footer-logo">HERRITAGE LIBRARY</h2>
+          <p>Premium Cafe & Steakhouse. Culinary excellence with a cinematic vibe.</p>
+        </div>
+        <div class="footer-section footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="order.html">ORDER ONLINE</a></li>
+            <li><a href="reservation.html">RESERVATIONS</a></li>
+          </ul>
+        </div>
+        <div class="footer-section footer-links">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="blog.html">THE ARCHIVES</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+          </ul>
+        </div>
+        <div class="footer-section footer-socials">
+          <h3>Follow The Vibe</h3>
+          <div class="social-icon-box">
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon github"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 HERRITAGE LIBRARY | ALL RIGHTS RESERVED</p>
+      </div>
+    </div>
+</footer>
+
+<button id="scrollToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<script src="animations.js"></script>
+<script src="common.js"></script>
+<script src="gallery-app.js"></script>
+</body>
+</html>

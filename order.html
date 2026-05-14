@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Online | Herritage Library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="order.css">
+</head>
+<body>
+
+<nav class="navbar" style="background: rgba(15, 8, 2, 0.95); position: fixed;">
+    <a href="index.html" class="logo">HERRITAGE LIBRARY</a>
+    <div class="nav-links" id="navLinks">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html" style="color: #C5A059;">Order</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn">Explore <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="about.html">About Us</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="blog.html">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </li>
+            <li><a href="signin.html">Dashboard</a></li>
+        </ul>
+    </div>
+    <img src="images/btn.png" alt="menu" class="menu-hamburger" onclick="toggleMenu()">
+</nav>
+
+<section class="order-section animate-on-scroll delay-100">
+    <!-- Menu Grid -->
+    <div class="order-menu">
+        <h2 class="category-title">Signature Steaks</h2>
+        <div class="order-grid">
+            <div class="order-card">
+                <img src="images/steak1.jpg" alt="Ribeye">
+                <div class="order-card-content">
+                    <h3>Dry-Aged Ribeye</h3>
+                    <span class="order-price">13,440 PKR</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('Dry-Aged Ribeye', 13440)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="order-card">
+                <img src="images/wagyu.jpg" alt="Wagyu">
+                <div class="order-card-content">
+                    <h3>Wagyu Masterpiece</h3>
+                    <span class="order-price">26,600 PKR</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('Wagyu Masterpiece', 26600)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="category-title">Mains & Pasta</h2>
+        <div class="order-grid">
+            <div class="order-card">
+                <img src="images/pasta.jpg" alt="Pasta">
+                <div class="order-card-content">
+                    <h3>Artisan Fettuccine</h3>
+                    <span class="order-price">7,840 PKR</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('Artisan Fettuccine', 7840)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="order-card">
+                <img src="images/burger.jpg" alt="Burger">
+                <div class="order-card-content">
+                    <h3>Signature Burger</h3>
+                    <span class="order-price">6,720 PKR</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('Signature Burger', 6720)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+        <h2 class="category-title">Beverages & Desserts</h2>
+        <div class="order-grid">
+            <div class="order-card">
+                <img src="images/coffee.jpg" alt="Coffee">
+                <div class="order-card-content">
+                    <h3>Vintage Espresso</h3>
+                    <span class="order-price">3,360 PKR</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('Vintage Espresso', 3360)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="order-card">
+                <img src="images/dessert.jpg" alt="Dessert">
+                <div class="order-card-content">
+                    <h3>Molten Library</h3>
+                    <span class="order-price">4,200 PKR</span>
+                    <button class="add-to-cart-btn" onclick="addToCart('Molten Library', 4200)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Order Summary Sidebar -->
+    <div class="order-summary">
+        <h3 class="summary-title">Your Order</h3>
+        <div class="cart-items" id="cartItems">
+            <div class="empty-cart-msg" id="emptyCartMsg">Your cart is empty.</div>
+            <!-- Cart items will be injected here via JS -->
+        </div>
+        <div class="cart-total">
+            <span>Total:</span>
+            <span id="cartTotalVal">0 PKR</span>
+        </div>
+        <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+    </div>
+</section>
+
+<!-- Receipt Modal -->
+<div id="receiptModal" class="modal">
+    <div class="receipt-card">
+        <div class="receipt-header">
+            <h2>HERRITAGE LIBRARY</h2>
+            <p>THE CULINARY CHRONICLES</p>
+            <div class="divider"></div>
+            <h3>OFFICIAL RECEIPT</h3>
+        </div>
+        
+        <div class="receipt-info">
+            <p><strong>Order ID:</strong> <span id="receiptID">#HL-1024</span></p>
+            <p><strong>Date:</strong> <span id="receiptDate">2026-05-13</span></p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div id="receiptItems" class="receipt-items-list">
+            <!-- Items will be injected here -->
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="receipt-total">
+            <span>TOTAL AMOUNT</span>
+            <span id="receiptTotalVal">0 PKR</span>
+        </div>
+
+        <div class="receipt-footer">
+            <p>Thank you for dining with us!</p>
+            <p>Please present this digital receipt upon delivery.</p>
+            <button class="close-receipt-btn" onclick="closeReceipt()">Close & Clear Cart</button>
+        </div>
+    </div>
+</div>
+
+<footer class="main-footer animate-on-scroll">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h2 class="footer-logo">HERRITAGE LIBRARY</h2>
+          <p>Premium Cafe & Steakhouse. Culinary excellence with a cinematic vibe.</p>
+        </div>
+        <div class="footer-section footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="order.html">ORDER ONLINE</a></li>
+            <li><a href="reservation.html">RESERVATIONS</a></li>
+          </ul>
+        </div>
+        <div class="footer-section footer-links">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="blog.html">THE ARCHIVES</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+          </ul>
+        </div>
+        <div class="footer-section footer-socials">
+          <h3>Follow The Vibe</h3>
+          <div class="social-icon-box">
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon github"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 HERRITAGE LIBRARY | ALL RIGHTS RESERVED</p>
+      </div>
+    </div>
+</footer>
+
+<button id="scrollToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<script src="animations.js"></script>
+<script src="common.js"></script>
+<script src="order-app.js"></script>
+
+</body>
+</html>

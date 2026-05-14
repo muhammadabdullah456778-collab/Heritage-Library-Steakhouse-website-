@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herritage Library | The Culinary Chronicles</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <nav class="navbar">
+    <a href="index.html" class="logo">HERRITAGE LIBRARY</a>
+    <div class="nav-links" id="navLinks">
+      <ul>
+        <li><a href="index.html" style="color: #C5A059;">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="order.html">Order</a></li>
+        <li><a href="reservation.html">Reservation</a></li>
+        <li class="dropdown">
+          <a href="javascript:void(0)" class="dropbtn">Explore <i class="fas fa-caret-down"></i></a>
+          <div class="dropdown-content">
+            <a href="about.html">About Us</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </li>
+        <li><a href="signin.html">Dashboard</a></li>
+      </ul>
+    </div>
+    <img src="images/btn.png" alt="menu" class="menu-hamburger" onclick="toggleMenu()">
+  </nav>
+
+  <header>
+    <div class="hero-content">
+      <h1>Welcome to Herritage Library</h1>
+      <p>Where Every Dish Tells a Story</p>
+      <a href="menu.html" class="btn">Explore Menu</a>
+    </div>
+  </header>
+
+  <section class="about animate-on-scroll">
+    <div class="about-container">
+      <div class="about-text">
+        <h2 class="section-title" style="text-align: left;">About Us</h2>
+        <p>Herritage Library is a premium cafe & steakhouse. Just like a library holds knowledge, we hold recipes passed
+          through generations. Experience the taste of perfection in a truly luxurious environment.</p>
+      </div>
+      <div class="about-img">
+        <img src="images/restaurent.jpg" alt="Interior">
+      </div>
+    </div>
+  </section>
+
+  <section class="chapters animate-on-scroll">
+    <h2 class="section-title">The Culinary Chronicles</h2>
+    <p class="section-subtitle">8 Chapters of Taste, Tradition, and Legacy</p>
+
+    <div class="chapter-container">
+      <div class="chapter" onclick="window.location.href='order.html'">
+        <div class="chapter-img"><img src="images/steak1.jpg" alt="Dish 1"></div>
+        <div class="chapter-badge">Chapter I</div>
+        <h4>Dry-Aged Ribeye</h4>
+        <p class="history-text">The foundation of our steakhouse, aged for 28 days for a rustic, bold flavor.</p>
+      </div>
+
+      <div class="chapter" onclick="window.location.href='order.html'">
+        <div class="chapter-img"><img src="images/coffee.jpg" alt="Dish 2"></div>
+        <div class="chapter-badge">Chapter II</div>
+        <h4>Vintage Espresso</h4>
+        <p class="history-text">A legacy of Ethiopian beans, roasted to perfection to bring out 'dark gold' notes.</p>
+      </div>
+
+      <div class="chapter" onclick="window.location.href='order.html'">
+        <div class="chapter-img"><img src="images/burger.jpg" alt="Dish 3"></div>
+        <div class="chapter-badge">Chapter III</div>
+        <h4>Wagyu Masterpiece</h4>
+        <p class="history-text">A royal fusion of premium Wagyu beef and rare truffles on a toasted brioche.</p>
+      </div>
+
+      <div class="chapter" onclick="window.location.href='order.html'">
+        <div class="chapter-img"><img src="images/seafood.jpg" alt="Dish 4"></div>
+        <div class="chapter-badge">Chapter IV</div>
+        <h4>Atlantic Salmon</h4>
+        <p class="history-text">Pan-seared perfection with a secret citrus glaze inspired by coastal traditions.</p>
+      </div>
+
+      <div class="chapter" onclick="window.location.href='order.html'">
+        <div class="chapter-img"><img src="images/pasta.jpg" alt="Dish 5"></div>
+        <div class="chapter-badge">Chapter V</div>
+        <h4>Artisan Fettuccine</h4>
+        <p class="history-text">Hand-rolled pasta served with a heritage white sauce passed down through generations.
+        </p>
+      </div>
+
+      <div class="chapter" onclick="window.location.href='order.html'">
+        <div class="chapter-img"><img src="images/lamb.jpg" alt="Dish 6"></div>
+        <div class="chapter-badge">Chapter VI</div>
+        <h4>Herb-Crusted Lamb</h4>
+        <p class="history-text">Slow-roasted chops seasoned with mountain herbs for a truly aromatic experience.</p>
+      </div>
+
+      <div class="chapter" onclick="window.location.href='order.html'">
+        <div class="chapter-img"><img src="images/mocktail.jpg" alt="Dish 7"></div>
+        <div class="chapter-badge">Chapter VII</div>
+        <h4>The Library Fizz</h4>
+        <p class="history-text">Our signature non-alcoholic brew, blending exotic botanicals and fresh zest.</p>
+      </div>
+
+      <div class="chapter" onclick="window.location.href='order.html'">
+        <div class="chapter-img"><img src="images/dessert.jpg" alt="Dish 8"></div>
+        <div class="chapter-badge">Chapter Final</div>
+        <h4>Molten Library</h4>
+        <p class="history-text">The grand finale. A warm Belgian chocolate heart with aged vanilla bean cream.</p>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top: 50px;">
+      <a href="menu.html" class="btn">View Full Menu &rarr;</a>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <h2 class="section-title">Visual Library</h2>
+    <div class="gallery-box">
+      <img src="images/steak1.jpg" alt="Gallery 1">
+      <img src="images/coffee.jpg" alt="Gallery 2">
+      <img src="images/burger.jpg" alt="Gallery 3">
+      <img src="images/restaurent.jpg" alt="Gallery 4">
+    </div>
+    <div style="text-align:center; margin-top: 40px;">
+      <a href="gallery.html" class="btn"
+        style="background: transparent; border: 1px solid var(--accent-gold); color: var(--accent-gold);">Explore Full
+        Gallery &rarr;</a>
+    </div>
+  </section>
+
+  <section class="testimonials animate-on-scroll">
+    <h2 class="section-title">Voices of the Archive</h2>
+    <p class="section-subtitle">What critics are saying</p>
+
+    <div class="testimonial-container">
+      <div class="testimonial-slide active">
+        <p class="testimonial-text">"An absolute masterpiece of culinary art. The Wagyu melted in my mouth, and the
+          atmosphere transported me to another era."</p>
+        <h4 class="testimonial-author">- The Culinary Gazette</h4>
+      </div>
+      <div class="testimonial-slide">
+        <p class="testimonial-text">"Herritage Library isn't just a restaurant; it's a cinematic experience. The
+          attention to detail in both food and design is unparalleled."</p>
+        <h4 class="testimonial-author">- Gourmet Weekly</h4>
+      </div>
+      <div class="testimonial-slide">
+        <p class="testimonial-text">"The Vintage Espresso is arguably the best roast I've had this decade. A must-visit
+          for anyone who appreciates fine dining."</p>
+        <h4 class="testimonial-author">- Coffee Connoisseurs</h4>
+      </div>
+
+      <div class="testimonial-controls">
+        <button class="testimonial-btn" onclick="changeTestimonial(-1)"><i class="fas fa-chevron-left"></i></button>
+        <button class="testimonial-btn" onclick="changeTestimonial(1)"><i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="main-footer animate-on-scroll">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h2 class="footer-logo">HERRITAGE LIBRARY</h2>
+          <p>Premium Cafe & Steakhouse. Culinary excellence with a cinematic vibe.</p>
+        </div>
+        <div class="footer-section footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="order.html">ORDER ONLINE</a></li>
+            <li><a href="reservation.html">RESERVATIONS</a></li>
+          </ul>
+        </div>
+        <div class="footer-section footer-links">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="blog.html">THE ARCHIVES</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+          </ul>
+        </div>
+        <div class="footer-section footer-socials">
+          <h3>Follow The Vibe</h3>
+          <div class="social-icon-box">
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon github"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 HERRITAGE LIBRARY | ALL RIGHTS RESERVED</p>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scrollToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top"><i
+      class="fas fa-chevron-up"></i></button>
+
+</body>
+<script src="animations.js"></script>
+<script src="common.js"></script>
+<script src="index.js"></script>
+
+</html>

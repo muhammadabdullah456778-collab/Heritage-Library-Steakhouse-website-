@@ -1,0 +1,180 @@
+:root {
+    --bg-dark: #0f0802;
+    --bg-section: #1a0d02;
+    --accent-gold: #C5A059;
+    --text-light: #e0e0e0;
+    --text-muted: #a0a0a0;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+/* Hero — background-image is injected by JS */
+.chapter-hero {
+    height: 65vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: center;
+    padding-bottom: 60px;
+    margin-top: 70px;
+    position: relative;
+}
+
+.chapter-category {
+    color: var(--accent-gold);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.chapter-hero .hero-content h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #fff;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    line-height: 1.2;
+    /* Override the fadeInDown from about.css that bleeds through */
+    animation: none;
+}
+
+.chapter-meta {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* Article Reading Area */
+.chapter-content {
+    padding: 70px 5%;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+.drop-cap::first-letter {
+    float: left;
+    font-size: 4.5rem;
+    line-height: 3.8rem;
+    padding-top: 4px;
+    padding-right: 14px;
+    padding-left: 3px;
+    color: var(--accent-gold);
+    font-weight: 700;
+    font-family: 'Georgia', serif;
+}
+
+.reading-container h2 {
+    color: #fff;
+    font-size: 1.8rem;
+    margin-top: 55px;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.reading-container h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background-color: var(--accent-gold);
+    border-radius: 2px;
+}
+
+.reading-container p {
+    margin-bottom: 25px;
+    color: #c8c8c8;
+    line-height: 1.9;
+}
+
+.article-image {
+    width: 100%;
+    height: auto;
+    max-height: 460px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 45px 0;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+    border: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+.reading-container blockquote {
+    margin: 55px 0;
+    padding: 30px 35px;
+    background: rgba(26, 13, 2, 0.7);
+    border-left: 4px solid var(--accent-gold);
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #fff;
+    line-height: 1.6;
+    border-radius: 0 8px 8px 0;
+    position: relative;
+}
+
+.reading-container blockquote::before {
+    content: '\201C';
+    font-size: 5rem;
+    color: var(--accent-gold);
+    opacity: 0.15;
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    font-family: 'Georgia', serif;
+    line-height: 1;
+}
+
+.article-footer {
+    margin-top: 70px;
+    padding-top: 30px;
+    border-top: 1px solid rgba(197, 160, 89, 0.2);
+}
+
+.back-link {
+    color: var(--accent-gold);
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.back-link:hover {
+    color: #fff;
+    transform: translateX(-6px);
+}
+
+@media (max-width: 768px) {
+    .chapter-hero {
+        height: 50vh;
+        padding-bottom: 40px;
+    }
+
+    .chapter-hero .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .chapter-content {
+        padding: 40px 5%;
+        font-size: 1rem;
+    }
+
+    .reading-container blockquote {
+        font-size: 1.15rem;
+        padding: 20px;
+    }
+}

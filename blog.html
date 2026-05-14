@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Archives | Herritage Library</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+
+<nav class="navbar" style="background: rgba(15, 8, 2, 0.95); position: fixed;">
+    <a href="index.html" class="logo">HERRITAGE LIBRARY</a>
+    <div class="nav-links" id="navLinks">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order</a></li>
+            <li><a href="reservation.html">Reservation</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)" class="dropbtn" style="color: #C5A059;">Explore <i class="fas fa-caret-down"></i></a>
+                <div class="dropdown-content">
+                    <a href="about.html">About Us</a>
+                    <a href="gallery.html">Gallery</a>
+                    <a href="blog.html" style="color: #C5A059 !important;">Blog</a>
+                    <a href="contact.html">Contact</a>
+                </div>
+            </li>
+            <li><a href="signin.html">Dashboard</a></li>
+        </ul>
+    </div>
+    <img src="images/btn.png" alt="menu" class="menu-hamburger" onclick="toggleMenu()">
+</nav>
+
+<header class="blog-hero animate-on-scroll">
+  <div class="hero-content">
+    <h1 style="letter-spacing: 5px;">The Archives</h1>
+    <p>Stories, Techniques, and Culinary Philosophy</p>
+  </div>
+</header>
+
+<section class="blog-section animate-on-scroll delay-100">
+    <div class="blog-grid">
+        <div class="blog-card">
+            <div class="blog-img-box">
+                <img src="images/steak1.jpg" alt="Dry-Aged Process" class="blog-img">
+            </div>
+            <div class="blog-content">
+                <span class="blog-category">Culinary Technique</span>
+                <h3 class="blog-title">The Art of the 28-Day Dry Age</h3>
+                <p class="blog-excerpt">Discover why patience is our most vital ingredient. We walk you through our specialized aging room where flavors concentrate and tenderize over 28 days.</p>
+                <a href="read_chapter.html?id=1" class="read-more">Read Chapter <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <div class="blog-img-box">
+                <img src="images/coffee.jpg" alt="Coffee Roasting" class="blog-img">
+            </div>
+            <div class="blog-content">
+                <span class="blog-category">Sourcing</span>
+                <h3 class="blog-title">Chasing the Ethiopian Dark Gold</h3>
+                <p class="blog-excerpt">Our head barista shares the story of traveling to the high altitudes of Ethiopia to secure the perfect heritage beans for our Vintage Espresso.</p>
+                <a href="read_chapter.html?id=2" class="read-more">Read Chapter <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="blog-card">
+            <div class="blog-img-box">
+                <img src="images/pasta.jpg" alt="Handmade Pasta" class="blog-img">
+            </div>
+            <div class="blog-content">
+                <span class="blog-category">Recipes & Legacy</span>
+                <h3 class="blog-title">A Sauce Passed Down Since 1924</h3>
+                <p class="blog-excerpt">The story of our Artisan Fettuccine. How a simple family recipe survived a century and became the heart of our pasta menu.</p>
+                <a href="read_chapter.html?id=3" class="read-more">Read Chapter <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+        
+        <div class="blog-card">
+            <div class="blog-img-box">
+                <img src="images/restaurent.jpg" alt="Interior Design" class="blog-img">
+            </div>
+            <div class="blog-content">
+                <span class="blog-category">Atmosphere</span>
+                <h3 class="blog-title">Designing Silence: The Library Concept</h3>
+                <p class="blog-excerpt">Why did we design a steakhouse to feel like a library? An exploration into the psychology of luxurious, quiet dining environments.</p>
+                <a href="read_chapter.html?id=4" class="read-more">Read Chapter <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="main-footer animate-on-scroll">
+    <div class="footer-container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h2 class="footer-logo">HERRITAGE LIBRARY</h2>
+          <p>Premium Cafe & Steakhouse. Culinary excellence with a cinematic vibe.</p>
+        </div>
+        <div class="footer-section footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="menu.html">MENU</a></li>
+            <li><a href="order.html">ORDER ONLINE</a></li>
+            <li><a href="reservation.html">RESERVATIONS</a></li>
+          </ul>
+        </div>
+        <div class="footer-section footer-links">
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="about.html">ABOUT US</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+            <li><a href="blog.html">THE ARCHIVES</a></li>
+            <li><a href="contact.html">CONTACT US</a></li>
+          </ul>
+        </div>
+        <div class="footer-section footer-socials">
+          <h3>Follow The Vibe</h3>
+          <div class="social-icon-box">
+            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon github"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-icon"><i class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 HERRITAGE LIBRARY | ALL RIGHTS RESERVED</p>
+      </div>
+    </div>
+</footer>
+
+<button id="scrollToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Back to top"><i class="fas fa-chevron-up"></i></button>
+
+<script src="animations.js"></script>
+<script src="common.js"></script>
+</body>
+</html>
